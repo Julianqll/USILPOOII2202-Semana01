@@ -6,19 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite el importe que aporta Carmela:");
-        double importeCarmela = sc.nextDouble();
-        System.out.println("Digite el importe que aporta Javier:");
-        double importeJavier = sc.nextDouble();
-        System.out.println("Digite el importe que aporta Eulogio:");
-        double importeEulogio = sc.nextDouble();
-        double capital = importeCarmela + importeJavier + importeEulogio;
-        double porcentajeCarmela = (importeCarmela/capital) * 100;
-        double porcentajeJavier = (importeJavier/capital) * 100;
-        double porcentajeEulogio = (importeEulogio/capital) * 100;
-        System.out.println("El capital formado es: " + capital);
-        System.out.println("El porcentaje del capital de Carmela es: " + porcentajeCarmela +"% \n" +
-                            "El porcentaje del capital de Javier es: " + porcentajeJavier +"% \n" +
-                            "El porcentaje del capital de Eulogio es: " + porcentajeEulogio +"% \n");
+        System.out.println("Digite la ganancia de la empresa en el año:");
+        double gananciaAño = sc.nextDouble();
+        System.out.println("Digite la cantidad de acciones del primer socio:");
+        double accionesPrimerSocio = sc.nextDouble();
+        System.out.println("Digite la cantidad de acciones del segundo socio:");
+        double accionesSegundoSocio = sc.nextDouble();
+        System.out.println("Digite la cantidad de acciones del tercer socio");
+        double accionesTercerSocio = sc.nextDouble();
+        double totalAcciones = accionesPrimerSocio + accionesSegundoSocio + accionesTercerSocio;
+        double gananciaPrimerSocio = (accionesPrimerSocio/totalAcciones) * gananciaAño;
+        double gananciaSegundoSocio = (accionesSegundoSocio/totalAcciones) * gananciaAño;
+        double gananciaTercerSocio = (accionesTercerSocio/totalAcciones) * gananciaAño;
+        System.out.println("El monto de ganancia que le corresponde al primer socio es: " + gananciaPrimerSocio +" \n" +
+                            "El monto de ganancia que le corresponde al primer socio es: " + gananciaSegundoSocio +" \n" +
+                            "El monto de ganancia que le corresponde al primer socio es: " + gananciaTercerSocio +" \n");
     }
 }
