@@ -10,11 +10,13 @@ public class Main {
         double horasTrabajadas = sc.nextDouble();
         System.out.println("Digite la tarifa horaria:");
         double tarifaHoraria = sc.nextDouble();
-        double sueldoBasico = horasTrabajadas * tarifaHoraria;
-        double sueldoBruto = sueldoBasico * 1.18;
-        double sueldoNeto = sueldoBruto * 0.88;
-        System.out.println("El sueldo básico del empleado es: " + sueldoBasico);
+        double sueldoBruto = horasTrabajadas * tarifaHoraria;
+        double descuentoESSALUD = sueldoBruto * 0.09;
+        double descuentoAFP = sueldoBruto * 0.115;
+        double sueldoNeto = sueldoBruto - (descuentoESSALUD + descuentoAFP);
         System.out.println("El sueldo bruto del empleado es: " + sueldoBruto);
+        System.out.println("El descuento por ESSALUD es: " + descuentoESSALUD);
+        System.out.println("El descuento por AFP es: " + descuentoAFP);
         System.out.println("El sueldo neto del empleado es: " + sueldoNeto);
     }
 }
