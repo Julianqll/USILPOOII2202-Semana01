@@ -6,23 +6,31 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite el consumo en GB:");
-        double consumo = sc.nextDouble();
-        double pagoMes;
-        if (consumo <= 4 && consumo >= 0)
+        System.out.println("Digite un entero de 3 cifras:");
+        int enteroTresCifras = sc.nextInt();
+        int enteroTresCifrasInvertido = 0;
+        boolean mascifras = false;
+        int i = 2;
+        while (i >= 0)
         {
-            pagoMes = 50;
+            int cifra = enteroTresCifras % 10;
+            enteroTresCifras /= 10;
+            if ((i == 0 && enteroTresCifras > 0) || (i > 0 && enteroTresCifras == 0))
+            {
+                mascifras = true;
+                break;
+            }
+            enteroTresCifrasInvertido += cifra * Math.pow(10,i);
+            i--;
+        }
+        if (mascifras)
+        {
+            System.out.println("Número incorrecto");
         }
         else
         {
-            pagoMes = 85;
-            if (consumo > 8)
-            {
-                double consumoAdicional = consumo - 8;
-                double pagoMesAdicional = consumoAdicional * 4.50;
-                pagoMes += pagoMesAdicional;
-            }
+            System.out.println(enteroTresCifrasInvertido);
         }
-        System.out.println("El recibo de consumo es: " + pagoMes);
+
     }
 }
