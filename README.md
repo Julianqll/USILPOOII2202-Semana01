@@ -1,15 +1,15 @@
 # USILPOOII2202-Semana01
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/64666002/186226276-8eb3767a-5069-4387-a5d9-9fc9505e6c50.png" alt="USIL"/>
+  <img src="https://user-images.githubusercontent.com/64666002/186226276-8eb3767a-5069-4387-a5d9-9fc9505e6c50.png" alt="USIL" width="250px"/>
 </p>
 
-## Tarea: (Done! :white_check_mark:)
-**PROGRAMACIÓN ORIENTADA A OBJETOS II (Ciclo 2022-2)** 
-_Primera hoja de ejercicios de Algoritmos_ 
+## :pushpin: Tarea:
+**PROGRAMACIÓN ORIENTADA A OBJETOS II (Ciclo 2022-2)**\
+_Primera hoja de ejercicios de Algoritmos_\
 **Alumno**: Julian Marcelo Quispe Lau Len
 
-## Indice:
+## :bookmark: Indice:
 - [Ir a Resolución Ejercicio 1](https://github.com/Julianqll/USILPOOII2202-Semana01/blob/ejercicio1/src/com/julianqll/Main.java)
 - [Ir a Resolución Ejercicio 2](https://github.com/Julianqll/USILPOOII2202-Semana01/blob/ejercicio2/src/com/julianqll/Main.java)
 - [Ir a Resolución Ejercicio 3](https://github.com/Julianqll/USILPOOII2202-Semana01/blob/ejercicio3/src/com/julianqll/Main.java)
