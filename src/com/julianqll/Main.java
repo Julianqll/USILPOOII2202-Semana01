@@ -6,38 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite un entero de 3 cifras:");
-        int enteroTresCifras = sc.nextInt();
-        int enteroTresCifrasCopia = enteroTresCifras;
-        int enteroTresCifrasInvertido = 0;
-        boolean mascifras = false;
-        int i = 2;
-        while (i >= 0)
+        System.out.println("Digite un entero positivo entre 1 y 100:");
+        int enteroPositivo = sc.nextInt();
+        if (enteroPositivo >= 1 && enteroPositivo <= 100)
         {
-            int cifra = enteroTresCifras % 10;
-            enteroTresCifras /= 10;
-            if ((i == 0 && enteroTresCifras > 0) || (i > 0 && enteroTresCifras == 0))
+            int counter = 0;
+            for (; enteroPositivo > 0 ; enteroPositivo /= 10)
             {
-                mascifras = true;
-                break;
+                counter++;
             }
-            enteroTresCifrasInvertido += cifra * Math.pow(10,i);
-            i--;
-        }
-        if (mascifras)
-        {
-            System.out.println("Número incorrecto");
-        }
-        else
-        {
-            if (enteroTresCifrasCopia == enteroTresCifrasInvertido)
+            if (counter == 1)
             {
-                System.out.println("Es numero capicua");
+                System.out.println("El numero tiene 1 digito");
             }
             else
             {
-                System.out.println("No es numero capicua");
+                System.out.println("El numero tiene " + counter + " digitos");
             }
+        }
+        else
+        {
+            System.out.println("Numero incorrecto");
         }
     }
 }
