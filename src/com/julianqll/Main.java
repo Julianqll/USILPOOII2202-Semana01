@@ -6,17 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite el precio del producto:");
-        double precioProducto = sc.nextDouble();
-        System.out.println("Digite la cantidad de unidades:");
-        double cantidadUnidades = sc.nextDouble();
-        System.out.println("Digite el porcetanje del descuento(%) sobre la compra:");
-        double porcentajeDescuento = sc.nextDouble();
-        double importeCompra = precioProducto * cantidadUnidades;
-        double importeDescuento = (porcentajeDescuento / 100) * importeCompra;
-        double importePagar = importeCompra - importeDescuento;
-        System.out.println("El importe de la compra es: " + importeCompra);
-        System.out.println("El importe del descuento es: " + importeDescuento);
-        System.out.println("El importe a pagar por la compra es: " + importePagar);
+        System.out.println("Digite el número total de horas trabajadas:");
+        double horasTrabajadas = sc.nextDouble();
+        System.out.println("Digite la tarifa horaria:");
+        double tarifaHoraria = sc.nextDouble();
+        double sueldoBasico = horasTrabajadas * tarifaHoraria;
+        double sueldoBruto = sueldoBasico * 1.18;
+        double sueldoNeto = sueldoBruto * 0.88;
+        System.out.println("El sueldo básico del empleado es: " + sueldoBasico);
+        System.out.println("El sueldo bruto del empleado es: " + sueldoBruto);
+        System.out.println("El sueldo neto del empleado es: " + sueldoNeto);
     }
 }
