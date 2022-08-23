@@ -8,6 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite un entero de 3 cifras:");
         int enteroTresCifras = sc.nextInt();
+        int enteroTresCifrasCopia = enteroTresCifras;
         int enteroTresCifrasInvertido = 0;
         boolean mascifras = false;
         int i = 2;
@@ -29,8 +30,14 @@ public class Main {
         }
         else
         {
-            System.out.println(enteroTresCifrasInvertido);
+            if (enteroTresCifrasCopia == enteroTresCifrasInvertido)
+            {
+                System.out.println("Es numero capicua");
+            }
+            else
+            {
+                System.out.println("No es numero capicua");
+            }
         }
-
     }
 }
